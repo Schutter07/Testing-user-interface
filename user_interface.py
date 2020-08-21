@@ -24,6 +24,11 @@ class Ui(QtWidgets.QMainWindow):
         self.pushButtonNext.setEnabled(False)
         self.pushButtonPrev.setEnabled(False)
 
+        self.nieuw()
+        self.actionNieuw.triggered.connect(lambda: self.nieuw())
+
+        self.actionSluit.triggered.connect(self.close)
+
         # Oefeningen hoofdstuk 2
         self.actionOpgave_2_1.triggered.connect(
             lambda: self.menuClickedWithSolution(
@@ -392,21 +397,194 @@ class Ui(QtWidgets.QMainWindow):
                 "Opgave 7.16",
                 "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk7/opgave7_16.txt"))
 
+        # Oefeningen hoofdstuk 8
+        self.actionOpgave_1_pagina_105.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 1 pagina 105", "test_opgave1_pagina105.py", "opgave1_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave1_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave1_pagina105.txt"))
 
+        self.actionOpgave_2_pagina_105.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 2 pagina 105", "test_opgave2_pagina105.py", "opgave2_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave2_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave2_pagina105.txt"))
 
+        self.actionOpgave_1_pagina_106.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 1 pagina 106", "test_opgave1_pagina106.py", "opgave1_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave1_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave1_pagina106.txt"))
 
+        self.actionOpgave_2_pagina_106.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 2 pagina 106", "test_opgave2_pagina106.py", "opgave2_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave2_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave2_pagina106.txt"))
 
+        self.actionOpgave_8_1.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 8.1", "test_opgave8_1.py", "opgave8_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_1.txt"))
 
+        self.actionOpgave_8_2.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 8.2", "test_opgave8_2.py", "opgave8_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_2.txt"))
 
+        self.actionOpgave_8_3.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 8.3", "test_opgave8_3.py", "opgave8_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_3.txt"))
 
-        #Check oplossing knop
+        self.actionOpgave_8_4.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 8.4", "test_opgave8_4.py", "opgave8_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_4.txt"))
+
+        self.actionOpgave_8_5.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 8.5",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_5.txt"))
+
+        self.actionOpgave_8_6.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 8.6", "test_opgave8_6.py", "opgave8_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_6.txt"))
+
+        self.actionOpgave_8_7.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 8.7", "test_opgave8_7.py", "opgave8_7.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_7.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_7.txt"))
+
+        # Oefeningen hoofdstuk 9
+        self.actionOpgave_9_1.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 9.1", "test_opgave9_1.py", "opgave9_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/test_opgave9_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_1.txt"))
+
+        self.actionOpgave_9_2.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 9.2",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_2.txt"))
+
+        self.actionOpgave_9_3.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 9.3",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_3.txt"))
+
+        self.actionOpgave_9_4.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 9.4", "test_opgave9_4.py", "opgave9_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/test_opgave9_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_4.txt"))
+
+        self.actionOpgave_9_5.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 9.5",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_5.txt"))
+
+        # Oefeningen hoofdstuk 10
+        self.actionOpgave_1_pagina_137.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 1 pagina 137",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave1_pagina137.txt"))
+
+        self.actionOpgave_2_pagina_137.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 2 pagina 137",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave2_pagina137.txt"))
+
+        self.actionOpgave_3_pagina_137.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 3 pagina 137", "test_opgave3_pagina137.py", "opgave3_pagina137.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/test_opgave3_pagina137.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave3_pagina137.txt"))
+
+        self.actionOpgave_1_pagina_141.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 1 pagina 141",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave1_pagina141.txt"))
+
+        self.actionOpgave_2_pagina_141.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 2 pagina 141",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave2_pagina141.txt"))
+
+        self.actionOpgave_3_pagina_141.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 3 pagina 141",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave3_pagina141.txt"))
+
+        self.actionOpgave_10_1.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 10.1",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_1.txt"))
+
+        self.actionOpgave_10_2.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 10.2",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_2.txt"))
+
+        self.actionOpgave_10_3.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 10.3",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_3.txt"))
+
+        self.actionOpgave_10_4.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave 10.4",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_4.txt"))
+
+        self.actionOpgave_10_5.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 10.5", "test_opgave10_5.py", "opgave10_5.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/test_opgave10_5.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_5.txt"))
+
+        self.actionOpgave_10_6.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 10.6", "test_opgave10_6.py", "opgave10_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/test_opgave10_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_6.txt"))
+
+        # Oefeningen hoofdstuk 11
+        self.actionOpgave_pagina_149.triggered.connect(
+            lambda: self.menuClickedWithoutSolution(
+                "Opgave pagina 149",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave_pagina149.txt"))
+
+        self.actionOpgave_11_1.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 11.1", "test_opgave11_1.py", "opgave11_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/test_opgave11_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave11_1.txt"))
+
+        self.actionOpgave_11_2.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 11.2", "test_opgave11_2.py", "opgave11_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/test_opgave11_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave11_2.txt"))
+
+        self.actionOpgave_11_3.triggered.connect(
+            lambda: self.menuClickedWithSolution(
+                "Opgave 11.3", "test_opgave11_3.py", "opgave11_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/test_opgave11_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave11_3.txt"))
+
+        # Check oplossing knop
         self.pushButtonCheck.clicked.connect(self.checkOplossing)
 
         self.pushButtonNext.clicked.connect(self.next)
 
         self.pushButtonPrev.clicked.connect(self.prev)
-
-
 
         self.show()
 
@@ -774,6 +952,159 @@ class Ui(QtWidgets.QMainWindow):
                 "Opgave 7.16",
                 "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk7/opgave7_16.txt")
 
+        # Oefeningen hoofdstuk 8
+        elif self.label == "Opgave 7.16":
+            self.menuClickedWithSolution(
+                "Opgave 1 pagina 105", "test_opgave1_pagina105.py", "opgave1_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave1_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave1_pagina105.txt")
+        elif self.label == "Opgave 1 pagina 105":
+            self.menuClickedWithSolution(
+                "Opgave 2 pagina 105", "test_opgave2_pagina105.py", "opgave2_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave2_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave2_pagina105.txt")
+        elif self.label == "Opgave 2 pagina 105":
+            self.menuClickedWithSolution(
+                "Opgave 1 pagina 106", "test_opgave1_pagina106.py", "opgave1_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave1_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave1_pagina106.txt")
+        elif self.label == "Opgave 1 pagina 106":
+            self.menuClickedWithSolution(
+                "Opgave 2 pagina 106", "test_opgave2_pagina106.py", "opgave2_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave2_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave2_pagina106.txt")
+        elif self.label == "Opgave 2 pagina 106":
+            self.menuClickedWithSolution(
+                "Opgave 8.1", "test_opgave8_1.py", "opgave8_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_1.txt")
+        elif self.label == "Opgave 8.1":
+            self.menuClickedWithSolution(
+                "Opgave 8.2", "test_opgave8_2.py", "opgave8_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_2.txt")
+        elif self.label == "Opgave 8.2":
+            self.menuClickedWithSolution(
+                "Opgave 8.3", "test_opgave8_3.py", "opgave8_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_3.txt")
+        elif self.label == "Opgave 8.3":
+            self.menuClickedWithSolution(
+                "Opgave 8.4", "test_opgave8_4.py", "opgave8_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_4.txt")
+        elif self.label == "Opgave 8.4":
+            self.menuClickedWithoutSolution(
+                "Opgave 8.5",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_5.txt")
+        elif self.label == "Opgave 8.5":
+            self.menuClickedWithSolution(
+                "Opgave 8.6", "test_opgave8_6.py", "opgave8_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_6.txt")
+        elif self.label == "Opgave 8.6":
+            self.menuClickedWithSolution(
+                "Opgave 8.7", "test_opgave8_7.py", "opgave8_7.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_7.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_7.txt")
+
+        # Oefeningen hoofdstuk 9
+        elif self.label == "Opgave 8.7":
+            self.menuClickedWithSolution(
+                "Opgave 9.1", "test_opgave9_1.py", "opgave9_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/test_opgave9_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_1.txt")
+        elif self.label == "Opgave 9.1":
+            self.menuClickedWithoutSolution(
+                "Opgave 9.2",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_2.txt")
+        elif self.label == "Opgave 9.2":
+            self.menuClickedWithoutSolution(
+                "Opgave 9.3",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_3.txt")
+        elif self.label == "Opgave 9.3":
+            self.menuClickedWithSolution(
+                "Opgave 9.4", "test_opgave9_4.py", "opgave9_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/test_opgave9_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_4.txt")
+        elif self.label == "Opgave 9.4":
+            self.menuClickedWithoutSolution(
+                "Opgave 9.5",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_5.txt")
+
+        # Oefeningen hoofdstuk 10
+        elif self.label == "Opgave 9.5":
+            self.menuClickedWithoutSolution(
+                "Opgave 1 pagina 137",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave1_pagina137.txt")
+        elif self.label == "Opgave 1 pagina 137":
+            self.menuClickedWithoutSolution(
+                "Opgave 2 pagina 137",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave2_pagina137.txt")
+        elif self.label == "Opgave 2 pagina 137":
+            self.menuClickedWithSolution(
+                "Opgave 3 pagina 137", "test_opgave3_pagina137.py", "opgave3_pagina137.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/test_opgave3_pagina137.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave3_pagina137.txt")
+        elif self.label == "Opgave 3 pagina 137":
+            self.menuClickedWithoutSolution(
+                "Opgave 1 pagina 141",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave1_pagina141.txt")
+        elif self.label == "Opgave 1 pagina 141":
+            self.menuClickedWithoutSolution(
+                "Opgave 2 pagina 141",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave2_pagina141.txt")
+        elif self.label == "Opgave 2 pagina 141":
+            self.menuClickedWithoutSolution(
+                "Opgave 3 pagina 141",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave3_pagina141.txt")
+        elif self.label == "Opgave 3 pagina 141":
+            self.menuClickedWithoutSolution(
+                "Opgave 10.1",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_1.txt")
+        elif self.label == "Opgave 10.1":
+            self.menuClickedWithoutSolution(
+                "Opgave 10.2",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_2.txt")
+        elif self.label == "Opgave 10.2":
+            self.menuClickedWithoutSolution(
+                "Opgave 10.3",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_3.txt")
+        elif self.label == "Opgave 10.3":
+            self.menuClickedWithoutSolution(
+                "Opgave 10.4",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_4.txt")
+        elif self.label == "Opgave 10.4":
+            self.menuClickedWithSolution(
+                "Opgave 10.5", "test_opgave10_5.py", "opgave10_5.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/test_opgave10_5.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_5.txt")
+        elif self.label == "Opgave 10.5":
+            self.menuClickedWithSolution(
+                "Opgave 10.6", "test_opgave10_6.py", "opgave10_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/test_opgave10_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_6.txt")
+
+        # Oefeningen hoofdstuk 11
+        elif self.label == "Opgave 10.6":
+            self.menuClickedWithoutSolution(
+                "Opgave pagina 149",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave_pagina149.txt")
+        elif self.label == "Opgave pagina 149":
+            self.menuClickedWithSolution(
+                "Opgave 11.1", "test_opgave11_1.py", "opgave11_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/test_opgave11_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave11_1.txt")
+        elif self.label == "Opgave 11.1":
+            self.menuClickedWithSolution(
+                "Opgave 11.2", "test_opgave11_2.py", "opgave11_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/test_opgave11_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave11_2.txt")
+        elif self.label == "Opgave 11.2":
+            self.menuClickedWithSolution(
+                "Opgave 11.3", "test_opgave11_3.py", "opgave11_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/test_opgave11_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave11_3.txt")
 
     def prev(self):
         # Oefeningen hoofdstuk 2
@@ -803,21 +1134,21 @@ class Ui(QtWidgets.QMainWindow):
                 "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/opgave_pagina20.txt")
         elif self.label == "Opgave 3.2":
             self.menuClickedWithSolution(
-            "Opgave 3.1", "test_opgave3_1.py", "opgave3_1.py",
-            "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/test_opgave3_1.py",
-            "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/opgave3_1.txt")
+                "Opgave 3.1", "test_opgave3_1.py", "opgave3_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/test_opgave3_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/opgave3_1.txt")
         elif self.label == "Opgave 3.3":
             self.menuClickedWithoutSolution(
-            "Opgave 3.2",
-            "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/opgave3_2.txt")
+                "Opgave 3.2",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/opgave3_2.txt")
         elif self.label == "Opgave 3.4":
             self.menuClickedWithoutSolution(
-            "Opgave 3.3",
-            "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/opgave3_3.txt")
+                "Opgave 3.3",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/opgave3_3.txt")
         elif self.label == "Opgave 3.5":
             self.menuClickedWithoutSolution(
-            "Opgave 3.4",
-            "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/opgave3_4.txt")
+                "Opgave 3.4",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk3/opgave3_4.txt")
 
         # Oefeningen hoofdstuk 4
         elif self.label == "Opgave pagina 26":
@@ -1140,10 +1471,158 @@ class Ui(QtWidgets.QMainWindow):
                 "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk7/test_opgave7_15.py",
                 "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk7/opgave7_15.txt")
 
+        # Oefeningen hoofdstuk 8
+        elif self.label == "Opgave 1 pagina 105":
+            self.menuClickedWithoutSolution(
+                "Opgave 7.16",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk7/opgave7_16.txt")
+        elif self.label == "Opgave 2 pagina 105":
+            self.menuClickedWithSolution(
+                "Opgave 1 pagina 105", "test_opgave1_pagina105.py", "opgave1_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave1_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave1_pagina105.txt")
+        elif self.label == "Opgave 1 pagina 106":
+            self.menuClickedWithSolution(
+                "Opgave 2 pagina 105", "test_opgave2_pagina105.py", "opgave2_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave2_pagina105.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave2_pagina105.txt")
+        elif self.label == "Opgave 2 pagina 106":
+            self.menuClickedWithSolution(
+                "Opgave 1 pagina 106", "test_opgave1_pagina106.py", "opgave1_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave1_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave1_pagina106.txt")
+        elif self.label == "Opgave 8.1":
+            self.menuClickedWithSolution(
+                "Opgave 2 pagina 106", "test_opgave2_pagina106.py", "opgave2_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave2_pagina106.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave2_pagina106.txt")
+        elif self.label == "Opgave 8.2":
+            self.menuClickedWithSolution(
+                "Opgave 8.1", "test_opgave8_1.py", "opgave8_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_1.txt")
+        elif self.label == "Opgave 8.3":
+            self.menuClickedWithSolution(
+                "Opgave 8.2", "test_opgave8_2.py", "opgave8_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_2.txt")
+        elif self.label == "Opgave 8.4":
+            self.menuClickedWithSolution(
+                "Opgave 8.3", "test_opgave8_3.py", "opgave8_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_3.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_3.txt")
+        elif self.label == "Opgave 8.5":
+            self.menuClickedWithSolution(
+                "Opgave 8.4", "test_opgave8_4.py", "opgave8_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_4.txt")
+        elif self.label == "Opgave 8.6":
+            self.menuClickedWithoutSolution(
+                "Opgave 8.5",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_5.txt")
+        elif self.label == "Opgave 8.7":
+            self.menuClickedWithSolution(
+                "Opgave 8.6", "test_opgave8_6.py", "opgave8_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_6.txt")
 
+        # Oefeningen hoofdstuk 9
+        elif self.label == "Opgave 9.1":
+            self.menuClickedWithSolution(
+                "Opgave 8.7", "test_opgave8_7.py", "opgave8_7.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/test_opgave8_7.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk8/opgave8_7.txt")
+        elif self.label == "Opgave 9.2":
+            self.menuClickedWithSolution(
+                "Opgave 9.1", "test_opgave9_1.py", "opgave9_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/test_opgave9_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_1.txt")
+        elif self.label == "Opgave 9.3":
+            self.menuClickedWithoutSolution(
+                "Opgave 9.2",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_2.txt")
+        elif self.label == "Opgave 9.4":
+            self.menuClickedWithoutSolution(
+                "Opgave 9.3",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_3.txt")
+        elif self.label == "Opgave 9.5":
+            self.menuClickedWithSolution(
+                "Opgave 9.4", "test_opgave9_4.py", "opgave9_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/test_opgave9_4.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_4.txt")
 
+        # Oefeningen hoofdstuk 10
+        elif self.label == "Opgave 1 pagina 137":
+            self.menuClickedWithoutSolution(
+                "Opgave 9.5",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk9/opgave9_5.txt")
+        elif self.label == "Opgave 2 pagina 137":
+            self.menuClickedWithoutSolution(
+                "Opgave 1 pagina 137",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave1_pagina137.txt")
+        elif self.label == "Opgave 3 pagina 137":
+            self.menuClickedWithoutSolution(
+                "Opgave 2 pagina 137",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave2_pagina137.txt")
+        elif self.label == "Opgave 1 pagina 141":
+            self.menuClickedWithSolution(
+                "Opgave 3 pagina 137", "test_opgave3_pagina137.py", "opgave3_pagina137.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/test_opgave3_pagina137.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave3_pagina137.txt")
+        elif self.label == "Opgave 2 pagina 141":
+            self.menuClickedWithoutSolution(
+                "Opgave 1 pagina 141",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave1_pagina141.txt")
+        elif self.label == "Opgave 3 pagina 141":
+            self.menuClickedWithoutSolution(
+                "Opgave 2 pagina 141",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave2_pagina141.txt")
+        elif self.label == "Opgave 10.1":
+            self.menuClickedWithoutSolution(
+                "Opgave 3 pagina 141",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave3_pagina141.txt")
+        elif self.label == "Opgave 10.2":
+            self.menuClickedWithoutSolution(
+                "Opgave 10.1",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_1.txt")
+        elif self.label == "Opgave 10.3":
+            self.menuClickedWithoutSolution(
+                "Opgave 10.2",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_2.txt")
+        elif self.label == "Opgave 10.4":
+            self.menuClickedWithoutSolution(
+                "Opgave 10.3",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_3.txt")
+        elif self.label == "Opgave 10.5":
+            self.menuClickedWithoutSolution(
+                "Opgave 10.4",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_4.txt")
+        elif self.label == "Opgave 10.6":
+            self.menuClickedWithSolution(
+                "Opgave 10.5", "test_opgave10_5.py", "opgave10_5.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/test_opgave10_5.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_5.txt")
 
-
+        # Oefeningen hoofdstuk 11
+        elif self.label == "Opgave pagina 149":
+            self.menuClickedWithSolution(
+                "Opgave 10.6", "test_opgave10_6.py", "opgave10_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/test_opgave10_6.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk10/opgave10_6.txt")
+        elif self.label == "Opgave 11.1":
+            self.menuClickedWithoutSolution(
+                "Opgave pagina 149",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave_pagina149.txt")
+        elif self.label == "Opgave 11.2":
+            self.menuClickedWithSolution(
+                "Opgave 11.1", "test_opgave11_1.py", "opgave11_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/test_opgave11_1.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave11_1.txt")
+        elif self.label == "Opgave 11.3":
+            self.menuClickedWithSolution(
+                "Opgave 11.2", "test_opgave11_2.py", "opgave11_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/test_opgave11_2.py",
+                "https://raw.githubusercontent.com/Schutter07/Testfiles/master/Hoofdstuk11/opgave11_2.txt")
 
     def menuClickedWithSolution(self, label, nameTest, nameOpgave, url1, url2):
         self.deleteFiles()
@@ -1166,7 +1645,6 @@ class Ui(QtWidgets.QMainWindow):
         with open("pcinput.py", "wb") as file:
             file.write(pcinp.content)
 
-
     def menuClickedWithoutSolution(self, text, url2):
         self.deleteFiles()
         self.pushButtonNext.setEnabled(True)
@@ -1182,6 +1660,10 @@ class Ui(QtWidgets.QMainWindow):
         r = requests.get(url)
         self.textOpgave.setHtml(r.text)
 
+    def nieuw(self):
+        r = requests.get("https://raw.githubusercontent.com/Schutter07/Testfiles/master/lege%20file.txt")
+        self.textOpgave.setHtml(r.text)
+
     def checkOplossing(self):
         self.openFileNameDialog()
 
@@ -1189,10 +1671,10 @@ class Ui(QtWidgets.QMainWindow):
         options = QtWidgets.QFileDialog.Options()
         options |= QtWidgets.QFileDialog.DontUseNativeDialog
         opgaveFileDir, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Open", "",
-                                                  "Python Files (*.py)", options=options)
+                                                                 "Python Files (*.py)", options=options)
         if opgaveFileDir:
             copyfile(opgaveFileDir, getcwd() + "\\" + self.opgaveFileName)
-            p = subprocess.run("pytest " + self.testFileName, stdout=subprocess.PIPE, stderr=subprocess.STDOUT )
+            p = subprocess.run("pytest " + self.testFileName, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             self.textConsole.setText(p.stdout.decode("utf-8"))
             remove(self.opgaveFileName)
 
@@ -1206,7 +1688,8 @@ class Ui(QtWidgets.QMainWindow):
 
     def closeEvent(self, event):
         reply = QtWidgets.QMessageBox.question(self, 'Sluit venster', 'Weet je zeker dat je het venster wil afsluiten?',
-                                     QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)
+                                               QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+                                               QtWidgets.QMessageBox.No)
         if reply == QtWidgets.QMessageBox.Yes:
             self.deleteFiles()
             event.accept()
@@ -1214,13 +1697,6 @@ class Ui(QtWidgets.QMainWindow):
             event.ignore()
 
 
-
-
-
-
-
 app = QtWidgets.QApplication(sys.argv)
 window = Ui()
 app.exec_()
-
-

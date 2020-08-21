@@ -185,12 +185,76 @@
     <addaction name="actionOpgave_7_15"/>
     <addaction name="actionOpgave_7_16"/>
    </widget>
+   <widget class="QMenu" name="menuBestand">
+    <property name="title">
+     <string>Bestand</string>
+    </property>
+    <addaction name="actionNieuw"/>
+    <addaction name="actionSluit"/>
+   </widget>
+   <widget class="QMenu" name="menuHfst_8">
+    <property name="title">
+     <string>Hfst 8</string>
+    </property>
+    <addaction name="actionOpgave_1_pagina_105"/>
+    <addaction name="actionOpgave_2_pagina_105"/>
+    <addaction name="actionOpgave_1_pagina_106"/>
+    <addaction name="actionOpgave_2_pagina_106"/>
+    <addaction name="actionOpgave_8_1"/>
+    <addaction name="actionOpgave_8_2"/>
+    <addaction name="actionOpgave_8_3"/>
+    <addaction name="actionOpgave_8_4"/>
+    <addaction name="actionOpgave_8_5"/>
+    <addaction name="actionOpgave_8_6"/>
+    <addaction name="actionOpgave_8_7"/>
+   </widget>
+   <widget class="QMenu" name="menuHfst_9">
+    <property name="title">
+     <string>Hfst 9</string>
+    </property>
+    <addaction name="actionOpgave_9_1"/>
+    <addaction name="actionOpgave_9_2"/>
+    <addaction name="actionOpgave_9_3"/>
+    <addaction name="actionOpgave_9_4"/>
+    <addaction name="actionOpgave_9_5"/>
+   </widget>
+   <widget class="QMenu" name="menuHfst_10">
+    <property name="title">
+     <string>Hfst 10</string>
+    </property>
+    <addaction name="actionOpgave_1_pagina_137"/>
+    <addaction name="actionOpgave_2_pagina_137"/>
+    <addaction name="actionOpgave_3_pagina_137"/>
+    <addaction name="actionOpgave_1_pagina_141"/>
+    <addaction name="actionOpgave_2_pagina_141"/>
+    <addaction name="actionOpgave_3_pagina_141"/>
+    <addaction name="actionOpgave_10_1"/>
+    <addaction name="actionOpgave_10_2"/>
+    <addaction name="actionOpgave_10_3"/>
+    <addaction name="actionOpgave_10_4"/>
+    <addaction name="actionOpgave_10_5"/>
+    <addaction name="actionOpgave_10_6"/>
+   </widget>
+   <widget class="QMenu" name="menuHfst_11">
+    <property name="title">
+     <string>Hfst 11</string>
+    </property>
+    <addaction name="actionOpgave_pagina_149"/>
+    <addaction name="actionOpgave_11_1"/>
+    <addaction name="actionOpgave_11_2"/>
+    <addaction name="actionOpgave_11_3"/>
+   </widget>
+   <addaction name="menuBestand"/>
    <addaction name="menuHfst_2"/>
    <addaction name="menuHfst_3"/>
    <addaction name="menuHfst_4"/>
    <addaction name="menuHfst_5"/>
    <addaction name="menuHfst_6"/>
    <addaction name="menuHfst_7"/>
+   <addaction name="menuHfst_8"/>
+   <addaction name="menuHfst_9"/>
+   <addaction name="menuHfst_10"/>
+   <addaction name="menuHfst_11"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpgave_2_1">
@@ -601,6 +665,176 @@
   <action name="actionOpgave_7_16">
    <property name="text">
     <string>Opgave 7.16</string>
+   </property>
+  </action>
+  <action name="actionNieuw">
+   <property name="text">
+    <string>Nieuw</string>
+   </property>
+  </action>
+  <action name="actionSluit">
+   <property name="text">
+    <string>Sluit</string>
+   </property>
+  </action>
+  <action name="actionOpgave_1_pagina_105">
+   <property name="text">
+    <string>Opgave 1 pagina 105</string>
+   </property>
+  </action>
+  <action name="actionOpgave_2_pagina_105">
+   <property name="text">
+    <string>Opgave 2 pagina 105</string>
+   </property>
+  </action>
+  <action name="actionOpgave_1_pagina_106">
+   <property name="text">
+    <string>Opgave 1 pagina 106</string>
+   </property>
+  </action>
+  <action name="actionOpgave_2_pagina_106">
+   <property name="text">
+    <string>Opgave 2 pagina 106</string>
+   </property>
+  </action>
+  <action name="actionOpgave_8_1">
+   <property name="text">
+    <string>Opgave 8.1</string>
+   </property>
+  </action>
+  <action name="actionOpgave_8_2">
+   <property name="text">
+    <string>Opgave 8.2</string>
+   </property>
+  </action>
+  <action name="actionOpgave_8_3">
+   <property name="text">
+    <string>Opgave 8.3</string>
+   </property>
+  </action>
+  <action name="actionOpgave_8_4">
+   <property name="text">
+    <string>Opgave 8.4</string>
+   </property>
+  </action>
+  <action name="actionOpgave_8_5">
+   <property name="text">
+    <string>Opgave 8.5</string>
+   </property>
+  </action>
+  <action name="actionOpgave_8_6">
+   <property name="text">
+    <string>Opgave 8.6</string>
+   </property>
+  </action>
+  <action name="actionOpgave_8_7">
+   <property name="text">
+    <string>Opgave 8.7</string>
+   </property>
+  </action>
+  <action name="actionOpgave_9_1">
+   <property name="text">
+    <string>Opgave 9.1</string>
+   </property>
+  </action>
+  <action name="actionOpgave_9_2">
+   <property name="text">
+    <string>Opgave 9.2</string>
+   </property>
+  </action>
+  <action name="actionOpgave_9_3">
+   <property name="text">
+    <string>Opgave 9.3</string>
+   </property>
+  </action>
+  <action name="actionOpgave_9_4">
+   <property name="text">
+    <string>Opgave 9.4</string>
+   </property>
+  </action>
+  <action name="actionOpgave_9_5">
+   <property name="text">
+    <string>Opgave 9.5</string>
+   </property>
+  </action>
+  <action name="actionOpgave_1_pagina_137">
+   <property name="text">
+    <string>Opgave 1 pagina 137</string>
+   </property>
+  </action>
+  <action name="actionOpgave_2_pagina_137">
+   <property name="text">
+    <string>Opgave 2 pagina 137</string>
+   </property>
+  </action>
+  <action name="actionOpgave_3_pagina_137">
+   <property name="text">
+    <string>Opgave 3 pagina 137</string>
+   </property>
+  </action>
+  <action name="actionOpgave_1_pagina_141">
+   <property name="text">
+    <string>Opgave 1 pagina 141</string>
+   </property>
+  </action>
+  <action name="actionOpgave_2_pagina_141">
+   <property name="text">
+    <string>Opgave 2 pagina 141</string>
+   </property>
+  </action>
+  <action name="actionOpgave_3_pagina_141">
+   <property name="text">
+    <string>Opgave 3 pagina 141</string>
+   </property>
+  </action>
+  <action name="actionOpgave_11_1">
+   <property name="text">
+    <string>Opgave 11.1</string>
+   </property>
+  </action>
+  <action name="actionOpgave_10_1">
+   <property name="text">
+    <string>Opgave 10.1</string>
+   </property>
+  </action>
+  <action name="actionOpgave_10_2">
+   <property name="text">
+    <string>Opgave 10.2</string>
+   </property>
+  </action>
+  <action name="actionOpgave_10_3">
+   <property name="text">
+    <string>Opgave 10.3</string>
+   </property>
+  </action>
+  <action name="actionOpgave_10_4">
+   <property name="text">
+    <string>Opgave 10.4</string>
+   </property>
+  </action>
+  <action name="actionOpgave_10_5">
+   <property name="text">
+    <string>Opgave 10.5</string>
+   </property>
+  </action>
+  <action name="actionOpgave_10_6">
+   <property name="text">
+    <string>Opgave 10.6</string>
+   </property>
+  </action>
+  <action name="actionOpgave_11_2">
+   <property name="text">
+    <string>Opgave 11.2</string>
+   </property>
+  </action>
+  <action name="actionOpgave_pagina_149">
+   <property name="text">
+    <string>Opgave pagina 149</string>
+   </property>
+  </action>
+  <action name="actionOpgave_11_3">
+   <property name="text">
+    <string>Opgave 11.3</string>
    </property>
   </action>
  </widget>
