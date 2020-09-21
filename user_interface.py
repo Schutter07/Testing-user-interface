@@ -1674,7 +1674,7 @@ class Ui(QtWidgets.QMainWindow):
                                                                  "Python Files (*.py)", options=options)
         if opgaveFileDir:
             copyfile(opgaveFileDir, getcwd() + "\\" + self.opgaveFileName)
-            p = subprocess.run("pytest " + self.testFileName, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            p = subprocess.run("pytest " + self.testFileName, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell = True)
             self.textConsole.setText(p.stdout.decode("utf-8"))
             remove(self.opgaveFileName)
 
